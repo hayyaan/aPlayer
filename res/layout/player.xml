@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app1="http://schemas.android.com/apk/res/com.androidhive.musicplayer"
+    xmlns:app="http://schemas.android.com/apk/res/com.devadvance.circulartest"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff301930"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/album_art_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@drawable/derp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".75"
+            android:background="#c4301930"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/songCurrentDurationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:13"
+                android:textColor="#eeeeee"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:text="/-"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/songTotalDurationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4:14" />
+        </LinearLayout>
+
+        <com.devadvance.circularseekbar.CircularSeekBar
+            android:id="@+id/circularSeekBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="20dip"
+            android:layout_weight="6"
+            android:gravity="center" 
+            app1:circle_color="#c4301930"
+            app1:circle_stroke_width="20"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/player_header_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/songTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="The Good, The Bad And The Ugly" />
+
+            <TextView
+                android:id="@+id/songAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="Consequence" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="1dp"
+        android:background="#eeeeee"
+            android:layout_height="match_parent" >
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/btnPlaylist"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight=".2"
+            android:background="@null"
+            android:src="@drawable/btn_playlist" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    	android:background="#ffeeeeee"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <ImageButton
+            android:id="@+id/btnPrevious"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/btn_previous" />
+
+        <ImageButton
+            android:id="@+id/btnPlay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/btn_play" />
+
+        <ImageButton
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/btn_next" />
+    </LinearLayout>
+
+</LinearLayout>
